@@ -50,6 +50,9 @@ func (tb *TBot) handleFile(c tele.Context) error {
 		log.Printf("error getting telegram file %v: %v\n", fileID, err)
 		return c.Send("there was an error, please try again")
 	}
+	if len(fileContent) > 10*1024*1024 {
+		return c.Send("The file is too big, please try with a smaller one")
+	}
 	if err := tb.initAssistant(c, fileContent); err != nil {
 		log.Printf("error initializing assistant: %v\n", err)
 		return c.Send("there was an error, please try again")
