@@ -19,3 +19,6 @@ Internally, it is integrated with [GPT Assistants](https://platform.openai.com/d
 ## How to run it
 In order to run it you just need to set the env variables `CHAT_GPT_KEY` with your OpenAI key and `TBOT_TOKEN` with your telegram token. `digester-bot` does not persist anything, so all the data is stored in memory, nothing in files/db. This makes it not very reliable but it's okay for now, I just wanted to focus on the features first and improve the technical aspects later.
 
+# Future work
+- Persist state in a NoSQL db
+- Create a simple AdminAPI to do things like listing active users and increasing limits
