@@ -14,7 +14,7 @@ This option can be very useful if you want to review the topic and test your kno
 You can try `digester-bot` by using [this link](https://web.telegram.org/k/#@DigestAIBot).
 
 # How does it work?
-Internally, it is integrated with [GPT Assistants](https://platform.openai.com/docs/assistants/overview]). One assistant is created every time a user sends a content (either a link or a file) and then all the prompts will be made against that assistant. 
+Internally, it is integrated with [GPT Assistants](https://platform.openai.com/docs/assistants/overview]). Because of this, the limits are much higher than the ones that are applied when you use ChatGPT directly. An assistant is created every time a user sends a content (either a link or a file) and then all the prompts will be made against that assistant. 
 
 ## How to run it
 In order to run it you just need to set the env variables `CHAT_GPT_KEY` with your OpenAI key and `TBOT_TOKEN` with your telegram token. `digester-bot` does not persist anything, so all the data is stored in memory, nothing in files/db. This makes it not very reliable but it's okay for now, I just wanted to focus on the features first and improve the technical aspects later.
